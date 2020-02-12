@@ -85,6 +85,7 @@ from neutron_lib.api.definitions import qos_default
 from neutron_lib.api.definitions import qos_gateway_ip
 from neutron_lib.api.definitions import qos_rule_type_details
 from neutron_lib.api.definitions import qos_rules_alias
+from neutron_lib.api.definitions import rbac_address_scope
 from neutron_lib.api.definitions import rbac_security_groups
 from neutron_lib.api.definitions import revisionifmatch
 from neutron_lib.api.definitions import router_admin_state_down_before_update
@@ -192,6 +193,7 @@ _ALL_API_DEFINITIONS = {
     qos_gateway_ip,
     qos_rule_type_details,
     qos_rules_alias,
+    rbac_address_scope,
     rbac_security_groups,
     revisionifmatch,
     router_admin_state_down_before_update,

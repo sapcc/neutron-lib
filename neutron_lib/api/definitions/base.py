@@ -126,6 +126,7 @@ KNOWN_EXTENSIONS = (
     'qos-gateway-ip',
     'qos-rules-alias',
     'quotas',
+    'rbac-address-scope',
     'rbac-policies',
     'rbac-security-groups',
     'router',
