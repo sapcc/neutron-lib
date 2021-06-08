@@ -130,6 +130,7 @@ KNOWN_EXTENSIONS = (
     'qos-rules-alias',
     'quotas',
     'rbac-address-scope',
+    'rbac-bgpvpn',
     'rbac-policies',
     'rbac-security-groups',
     'rbac-subnetpool',

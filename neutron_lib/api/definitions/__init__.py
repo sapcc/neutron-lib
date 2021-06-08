@@ -85,6 +85,7 @@ from neutron_lib.api.definitions import qos_port_network_policy
 from neutron_lib.api.definitions import qos_rule_type_details
 from neutron_lib.api.definitions import qos_rules_alias
 from neutron_lib.api.definitions import rbac_address_scope
+from neutron_lib.api.definitions import rbac_bgpvpn
 from neutron_lib.api.definitions import rbac_security_groups
 from neutron_lib.api.definitions import rbac_subnetpool
 from neutron_lib.api.definitions import revisionifmatch
@@ -195,6 +196,7 @@ _ALL_API_DEFINITIONS = {
     qos_rule_type_details,
     qos_rules_alias,
     rbac_address_scope,
+    rbac_bgpvpn,
     rbac_security_groups,
     rbac_subnetpool,
     revisionifmatch,
