@@ -16,7 +16,7 @@ NOTE: This module is a temporary shim until networking projects move to
       versioned objects at which point this module shouldn't be needed.
 """
 from oslo_db.sqlalchemy import utils as sa_utils
-from sqlalchemy.orm import lazyload
+from sqlalchemy.orm import attributes as sqlalchemy_attributes, lazyload, strategy_options
 from sqlalchemy import sql, or_, and_
 
 from neutron_lib._i18n import _
@@ -151,7 +151,10 @@ def query_with_hooks(context, model, field=None, lazy_fields=None):
 
     if lazy_fields:
         for field in lazy_fields:
-            query = query.options(lazyload(field))
+            if isinstance(field, sqlalchemy_attributes.InstrumentedAttribute):
+                query = query.options(lazyload(field))
+            elif isinstance(field, strategy_options._UnboundLoad):
+                query = query.options(field)
     return query
 
 
