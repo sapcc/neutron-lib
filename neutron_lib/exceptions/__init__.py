@@ -815,6 +815,8 @@ class PortBindingError(NeutronException):
     message = _("Binding for port %(port_id)s on host %(host)s could not be "
                 "created or updated.")
 
+class PortBindingInStatusActive(Conflict):
+    message = _("Binding for port %(port_id)s on host %(host)s is in use. ")
 
 class ProcessExecutionError(RuntimeError):
     def __init__(self, message, returncode):
