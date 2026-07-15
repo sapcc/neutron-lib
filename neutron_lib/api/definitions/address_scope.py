@@ -78,7 +78,9 @@ RESOURCE_ATTRIBUTE_MAP = {
                            'validate': {'type:uuid_or_none': None},
                            'is_filter': True,
                            'is_sort_key': True,
-                           'is_visible': True}
+                           'is_visible': True,
+                           'required_by_policy': False,
+                           'enforce_policy': True}
     },
     'networks': {
         IPV4_ADDRESS_SCOPE: {'allow_post': False,
